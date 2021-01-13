@@ -47,8 +47,8 @@
       value: `FOLDERS`,
       shares: [
         {
-          name: `{{V[1]}}`,
-          description: `{{V[1]}}`
+          name: `{{V[0]}}`,
+          description: `{{V[0]}}`
         }
       ]
     },
