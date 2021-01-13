@@ -2,8 +2,7 @@
 
 trap "killall sleep php ; exit" INT TERM
 
-IFS=
-for F in ${FOLDERS}; do
+echo "$FOLDERS" | while read F; do
   mkdir -p "/folders/$F"
 done
 
