@@ -27,7 +27,7 @@
     },
     {
       type: `Text`,
-      text: `You can rename a share by editing its name, but you cannot remove it unless it is empty. All shares <b>and their data</b> are erased if you remove this application.`
+      text: `For safety, renaming or removing a share does not remove the contents. All shares <b>and their data</b> are erased if you remove this application.`
     }
   ],
   properties: [
