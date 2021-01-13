@@ -10,9 +10,17 @@
       title: `Files and Folders`
     },
     {
-      type: `EditShares`,
-      name: `/folders`,
-      description: `Create a list of shares to store file and folders. These can be share with other apps.`
+      type: `EditEnvironmentAsTable`,
+      name: `FOLDERS`,
+      description: `Create a list of shares to store file and folders. These can be share with other apps.`,
+      headers: [
+        {
+          name: `Share name`
+        }
+      ],
+      pattern: `{{V[0]}}
+`,
+      join: ``
     },
     {
       type: `Text`
@@ -28,10 +36,21 @@
       name: `localtime`
     },
     {
+      type: `Environment`,
+      name: `FOLDERS`
+    },
+    {
       type: `Directory`,
       name: `/folders`,
       style: `store`,
-      backup: true
+      backup: true,
+      value: `FOLDERS`,
+      shares: [
+        {
+          name: `{{V[1]}}`,
+          description: `{{V[1]}}`
+        }
+      ]
     },
     {
       type: `Port`,
